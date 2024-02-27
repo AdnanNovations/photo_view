@@ -349,7 +349,9 @@ class PhotoViewCoreState extends State<PhotoViewCore>
             );
 
             if (widget.disableGestures) {
-              return child;
+              return IgnorePointer(
+                child: child,
+              );
             }
 
             return PhotoViewGestureDetector(
